@@ -6,7 +6,7 @@ severity-ranked exception report and summary dashboard.
 
 ---
 
-## Why this matters
+## Why I built this
 
 Every reporting period, a life insurer runs a **valuation** — the calculation of
 policy reserves and liabilities across its entire book of in-force business. That
@@ -56,7 +56,7 @@ Each finding is tagged **High** or **Medium**:
 
 ![Summary dashboard with one-click validation, showing exception counts by severity and by check.](screenshots/summary-dashboard.png)
 
-## How it was tested
+## How I tested it
 
 The checks are only worth trusting if you can prove they catch what they claim to.
 The repo includes an **error injector** (`Module1`) that does exactly that:
@@ -93,7 +93,7 @@ The tool reads a sheet named **`InForce`** with a header row and one policy per 
 Sample data lives in [`sample-data/`](sample-data/) as CSV so reviewers can inspect it
 without opening Excel.
 
-## How to run
+## How to run it
 
 1. Open **`InForce_Validation.xlsm`** and **enable macros** when prompted.
 2. *(Optional — to reproduce the test)* Run **`InjectErrors`** (`Module1`) to corrupt
@@ -107,20 +107,6 @@ Configuration (valuation date, age band, approved product list, sheet names) liv
 labelled constants at the top of `Module2` — no need to touch the check logic to
 re-point it at a different book.
 
-## Technologies & skills
-
-- **VBA / Excel automation** — event-free macro design, worksheet generation,
-  conditional formatting, sorting, `AutoFilter`, and frozen panes for the output
-  reports.
-- **Performance-minded coding** — the whole data block is pulled into an in-memory
-  array in one read rather than looped cell-by-cell (roughly 1000× faster on large
-  extracts).
-- **Data-quality / validation engineering** — six independent checks, per-field
-  severity triage, and human-readable exception messaging.
-- **Test design** — synthetic data plus an automated error injector and a generated
-  **answer key** for self-verifying, ground-truth testing.
-- **Actuarial / life insurance domain** — in-force extracts, valuation dates,
-  reserves, mortality bases, and product/valuation-basis mapping.
 
 ## Project structure
 
