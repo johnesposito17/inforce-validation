@@ -9,8 +9,6 @@ deliberately planted errors.
 
 ## Why I built this
 
-## Why I built this
-
 I wanted a project that would build my knowledge of Excel/VBA and the insurance concepts actuaries use day to day.
 
 Every reporting period, a life insurer runs a valuation meaning calculating policy
