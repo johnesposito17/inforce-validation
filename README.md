@@ -1,8 +1,9 @@
 # In-Force Data Validation Tool
 
-An Excel/VBA utility that validates a life insurance **in-force extract** before it
-feeds an actuarial valuation, applying six data-quality checks and producing a
-severity-ranked exception report and summary dashboard.
+A VBA Excel macro that checks life insurance policy data for errors before it's
+used in a valuation, applying six data-quality checks and producing a severity-ranked
+exception report and summary dashboard. Tested on 1,000 synthetic policy records with
+deliberately planted errors.
 
 ---
 
