@@ -1,0 +1,35 @@
+# ─── Excel / VBA ────────────────────────────────────────────────
+# Temporary "owner" lock files Excel creates while a workbook is open
+~$*.xlsx
+~$*.xlsm
+~$*.xlsb
+~$*.xls
+
+# Excel autosave / recovery / backup artifacts
+*.xlk
+*.tmp
+*.bak
+
+# Personal macro workbook — should never be committed
+PERSONAL.XLSB
+
+# ─── macOS ──────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ─── Windows ────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── Editors ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
